@@ -1,0 +1,37 @@
+{
+  "name": "ai-comment-assistant",
+  "version": "1.0.0",
+  "description": "AI system that finds social posts for a product request and drafts human-approved replies (Threads first)",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asosonskyi/ai-comment-assistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Asosonskyi/ai-comment-assistant/issues"
+  },
+  "homepage": "https://github.com/Asosonskyi/ai-comment-assistant#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "dotenv": "^18.0.7",
+    "fastify": "^5.12.7",
+    "grammy": "^1.46.0",
+    "openai": "^7.33.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  }
+}

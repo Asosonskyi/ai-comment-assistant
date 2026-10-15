@@ -1,0 +1,47 @@
+{
+  "id": "yollly",
+  "name": "Yollly",
+  "url": "https://yollly.com",
+  "pitch": "Yollly is a breakfast recipe app (iOS, Android and web). Snap a photo of the ingredients you have and it suggests breakfast recipes; you can browse by diet (vegan, vegetarian, gluten-free, quick, kids), filter by protein and macros, plan the week and get a shopping list. Free plan available, Premium is $5.99/month.",
+  "language": "en",
+  "tone": "warm, friendly, practical, short, no hard sell",
+  "platform": {
+    "name": "threads",
+    "tokenEnv": "THREADS_TOKEN_YOLLLY"
+  },
+  "discovery": {
+    "topicDescription": "People who don't know what to make for breakfast, want quick or healthy breakfast ideas, want to use up ingredients they already have, or are bored of eating the same breakfast every day.",
+    "keywords": ["breakfast ideas", "what to eat for breakfast"],
+    "tags": ["breakfast"],
+    "useQueryPlanner": true,
+    "maxQueries": 6,
+    "searchType": "RECENT",
+    "sinceHours": 24,
+    "mediaType": null,
+    "perQueryLimit": 25,
+    "includeOwnPosts": true
+  },
+  "filters": {
+    "excludeKeywords": ["recipe giveaway", "sponsored", "#ad"],
+    "excludeAuthors": [],
+    "minRelevance": 0.7,
+    "maxDraftsPerRun": 5
+  },
+  "replyPolicy": {
+    "allowLinks": false,
+    "maxChars": 400,
+    "dailyCap": 20,
+    "minGapMinutes": 0,
+    "jitterMinutes": 0,
+    "bannedPhrases": ["download now", "use my code", "link in bio"],
+    "maxSimilarity": 0.6
+  },
+  "llm": {
+    "default": { "provider": "anthropic", "model": "claude-haiku-5-5", "effort": "low" },
+    "draft": { "provider": "anthropic", "model": "claude-haiku-5-5", "effort": "medium" }
+  },
+  "approval": {
+    "channel": "telegram",
+    "chatId": 392987083
+  }
+}
