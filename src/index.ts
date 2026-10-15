@@ -68,8 +68,10 @@ async function main() {
 
   for (const product of productList) {
     if (product.platform.name === "threads" && !(await threads.connectFromEnv(product))) {
+      // The real key is printed only outside production, so the link is clickable from the dev terminal.
+      const key = process.env.NODE_ENV === "production" ? "<ADMIN_API_KEY>" : encodeURIComponent(env.ADMIN_API_KEY);
       app.log.info(
-        { product: product.id, login: `${env.PUBLIC_BASE_URL}/auth/threads/${product.id}?key=<ADMIN_API_KEY>` },
+        { product: product.id, login: `${env.PUBLIC_BASE_URL}/auth/threads/${product.id}?key=${key}` },
         "Threads account not connected; open the login URL",
       );
     }
